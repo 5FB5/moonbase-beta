@@ -13,26 +13,26 @@ namespace Sandbox
 	[Library]
 	public class MoonWalkController : BasePlayerController
 	{
-		public float SprintSpeed { get; set; } = 320.0f;
-		public float WalkSpeed { get; set; } = 150.0f;
-		public float DefaultSpeed { get; set; } = 190.0f;
+		public float SprintSpeed { get; set; } = 190.0f;
+		public float WalkSpeed { get; set; } = 100.0f;
+		public float DefaultSpeed { get; set; } = 100.0f;
 		public float Acceleration { get; set; } = 10.0f;
-		public float AirAcceleration { get; set; } = 50.0f;
-		public float FallSoundZ { get; set; } = -30.0f;
+		public float AirAcceleration { get; set; } = 0.0f;
+		public float FallSoundZ { get; set; } = 1.0f;
 		public float GroundFriction { get; set; } = 4.0f;
-		public float StopSpeed { get; set; } = 100.0f;
+		public float StopSpeed { get; set; } = 30.0f;
 		public float Size { get; set; } = 20.0f;
 		public float DistEpsilon { get; set; } = 0.03125f;
 		public float GroundAngle { get; set; } = 46.0f;
 		public float Bounce { get; set; } = 0.0f;
 		public float MoveFriction { get; set; } = 1.0f;
 		public float StepSize { get; set; } = 18.0f;
-		public float MaxNonJumpVelocity { get; set; } = 140.0f;
+		public float MaxNonJumpVelocity { get; set; } = 500.0f;
 		public float BodyGirth { get; set; } = 32.0f;
 		public float BodyHeight { get; set; } = 72.0f;
 		public float EyeHeight { get; set; } = 64.0f;
-		public float Gravity { get; set; } = 400.0f;
-		public float AirControl { get; set; } = 30.0f;
+		public float Gravity { get; set; } = 500.8f;
+		public float AirControl { get; set; } = 0.0f;
 		public bool Swimming { get; set; } = false;
 		public bool AutoJump { get; set; } = false;
 
