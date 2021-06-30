@@ -6,13 +6,13 @@ public partial class MoonbaseGame : Sandbox.Game
 	{
 		if (IsServer)
 		{
-			ConsoleSystem.Run( "sv_gravity 132.8" );
-			Log.Info( "Server: sv_gravity 132.8" );
+			//ConsoleSystem.Run( "sv_gravity 132.8" );
+			//Log.Info( "Server: sv_gravity 132.8" );
 
 			ConsoleSystem.Run( "playsound music_martian_cowboy" );
 			Log.Info( "Server: playsound music_martian_cowboy" );
 
-			new MoonbaseBetaPlayerExplorationHud(); // for test
+			new MoonbaseBetaMainMenuHud();
 		}
 
 	}
