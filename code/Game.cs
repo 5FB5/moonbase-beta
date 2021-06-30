@@ -12,7 +12,7 @@ public partial class MoonbaseGame : Sandbox.Game
 			ConsoleSystem.Run( "playsound music_martian_cowboy" );
 			Log.Info( "Server: playsound music_martian_cowboy" );
 
-			new MoonbaseBetaExplorationHud();
+			new MoonbaseBetaPlayerExplorationHud(); // for test
 		}
 
 	}

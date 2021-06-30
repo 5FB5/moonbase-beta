@@ -2,14 +2,14 @@
 using Sandbox.UI;
 
 [Library]
-public partial class MoonbaseBetaExplorationHud : HudEntity<RootPanel>
+public partial class MoonbaseBetaMainMenuHud : HudEntity<RootPanel>
 {
-	public MoonbaseBetaExplorationHud()
+	public MoonbaseBetaMainMenuHud()
 	{
 		if ( !IsClient )
 			return;
 
-		RootPanel.StyleSheet.Load( "ui/MoonbaseBetaHud.scss" );
+		RootPanel.StyleSheet.Load( "styles/MoonbaseBetaMainMenuHud.scss" );
 
 		RootPanel.AddChild<NameTags>();
 		RootPanel.AddChild<CrosshairCanvas>();
