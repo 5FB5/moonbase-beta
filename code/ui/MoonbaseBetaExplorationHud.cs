@@ -2,9 +2,9 @@
 using Sandbox.UI;
 
 [Library]
-public partial class MoonbaseBetaHud : HudEntity<RootPanel>
+public partial class MoonbaseBetaExplorationHud : HudEntity<RootPanel>
 {
-	public MoonbaseBetaHud()
+	public MoonbaseBetaExplorationHud()
 	{
 		if ( !IsClient )
 			return;
