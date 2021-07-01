@@ -7,6 +7,5 @@ public partial class MoonbaseBetaMainMenuHud : Sandbox.HudEntity<RootPanel>
 	{
 		if ( IsClient )
 			RootPanel.SetTemplate( "ui/MoonbaseBetaMainMenuHud.html" );
-
 	}
 }

@@ -6,6 +6,8 @@ partial class MoonbaseHostPlayer : Player
 	{
 		SetModel( "models/citizen/citizen.vmdl" );
 
+		Camera = new ThirdPersonCamera();
+
 		EnableAllCollisions = false;
 		EnableDrawing = false;
 		EnableHideInFirstPerson = true;
