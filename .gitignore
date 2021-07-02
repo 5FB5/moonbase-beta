@@ -21,7 +21,7 @@ code/Properties/launchSettings.json
 *.*_c
 
 maps/editor/*
-maps/*.vmap
+# maps/*.vmap
 maps/_bakeresourcecache
 maps/*.vpk
 maps/*.los
