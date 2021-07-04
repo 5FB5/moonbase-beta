@@ -20,11 +20,9 @@ public partial class MoonbaseGame : Sandbox.Game
 	{
 		base.ClientJoined( cl );
 
-		var host = new MoonbaseHostPlayer();
-		cl.Pawn = host;
-
-		host.Respawn();
-
+		// For host
+		if (IsServer)
+			cl.Camera = new MoonbaseMenuCamera();
 
 		//var player = new MoonbasePlayer();
 		//cl.Pawn = player;
