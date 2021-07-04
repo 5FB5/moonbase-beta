@@ -9,14 +9,13 @@ public partial class MoonbaseBetaExplorationHud : HudEntity<RootPanel>
 		if ( !IsClient )
 			return;
 
-		RootPanel.StyleSheet.Load( "ui/MoonbaseBetaHud.scss" );
+		RootPanel.StyleSheet.Load( "ui/MoonbaseBetaExplorationHud.scss" );
+		Log.Info("[MoonbaseBeta] 'MoonbaseBetaExplorationHud.scss' loaded");
 
 		RootPanel.AddChild<NameTags>();
 		RootPanel.AddChild<CrosshairCanvas>();
 		RootPanel.AddChild<ChatBox>();
 		RootPanel.AddChild<VoiceList>();
-		RootPanel.AddChild<KillFeed>();
-		RootPanel.AddChild<Scoreboard<ScoreboardEntry>>();
 
 	}
 }

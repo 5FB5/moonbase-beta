@@ -10,6 +10,8 @@ public partial class MoonbaseGame : Sandbox.Game
 
 			ConsoleSystem.Run( "sv_gravity 132.8" );
 			Log.Info( "Server: sv_gravity 132.8" );
+
+			new MoonbaseBetaExplorationHud();
 		}
 
 	}
