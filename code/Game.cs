@@ -9,7 +9,7 @@ public partial class MoonbaseGame : Sandbox.Game
 			Log.Info( "[MoonbaseBeta] You've connected as HOST" );
 			
 			new MoonbaseBetaMainMenuHud();
-			Log.Info( "[MoonbaseBeta] Host's HUD loaded!" );
+			Log.Warning( "[MoonbaseBeta] Starting 'MoonbaseBetaMainMenuHud()'..." );
 
 			ConsoleSystem.Run( "sv_gravity 132.8" );
 			Log.Info( "Server: sv_gravity 132.8" );
