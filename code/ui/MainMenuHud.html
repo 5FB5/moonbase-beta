@@ -1,15 +1,16 @@
-﻿<link rel="stylesheet" href="styles/MoonbaseBetaMainMenuHud.scss">
+﻿<link rel="stylesheet" href="styles/MainMenuHud.scss">
 
 <div class="menu">
     <text class="title">Moonbase: Beta (In development)</text>
     <text class="title-2">Choose a host gamemode</text>
 
+    
     <div class="gamemode-button">
         <button class="button-icon"><text>⚔️</text></button>
         <text>Space Deathmatch (WIP)</text>
         
-        <button class="button-icon"><text>🔎</text></button>
+        <button @ref="Test()" class="button-icon" onclick="Test()">🔎</button>
         <text>Exploration</text>
     </div>
-
+    
 </div>

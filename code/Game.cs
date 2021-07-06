@@ -1,40 +1,50 @@
 using Sandbox;
 
-public partial class MoonbaseGame : Sandbox.Game
+namespace MoonbaseBeta
 {
-	public MoonbaseGame()
+	public class MoonbaseGame : Sandbox.Game
 	{
-		if (IsServer)
+		public MoonbaseGame()
 		{
-			Log.Info( "[MoonbaseBeta] You've connected as HOST" );
-			
-			new MoonbaseBetaMainMenuHud();
-			Log.Warning( "[MoonbaseBeta] Starting 'MoonbaseBetaMainMenuHud()'..." );
+			if ( IsServer )
+			{
+				Log.Info( "[MoonbaseBeta] You've connected as HOST" );
 
-			ConsoleSystem.Run( "sv_gravity 132.8" );
-			Log.Info( "Server: sv_gravity 132.8" );
+				new MoonbaseBeta.MainMenuHud();
+				Log.Warning( "[MoonbaseBeta] Starting 'MoonbaseBetaMainMenuHud()'..." );
+
+				ConsoleSystem.Run( "sv_gravity 132.8" );
+				Log.Info( "Server: sv_gravity 132.8" );
+			}
+
 		}
+		public override void ClientJoined( Client cl )
+		{
+			base.ClientJoined( cl );
 
-	}
-	public override void ClientJoined( Client cl )
-	{
-		base.ClientJoined( cl );
+			// For host
+			if ( IsServer )
+			{
+				cl.Camera = new MoonbaseBeta.MenuCamera();
 
-		// For host
-		if (IsServer)
-			cl.Camera = new MoonbaseMenuCamera();
+				//if ( isExplorationStarted == true )
+				//{
+				//	new MoonbaseBeta.PlayerExplorationHud();
 
-		//var player = new MoonbasePlayer();
-		//cl.Pawn = player;
+				//	var player = new MoonbaseBeta.ExplorationPlayer();
+				//	cl.Pawn = player;
+					
+				//	player.Respawn();
+				//}
+			}
 
-		//player.Respawn();
-	}
+		}
+		public override void Shutdown()
+		{
+			ConsoleSystem.Run( "sv_gravity 600" );
+			Log.Info( "Server (Shutdown): sv_gravity 600" );
 
-	public override void Shutdown()
-	{
-		ConsoleSystem.Run( "sv_gravity 600" );
-		Log.Info( "Server (Shutdown): sv_gravity 600" );
-
-		base.Shutdown();
+			base.Shutdown();
+		}
 	}
 }
