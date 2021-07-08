@@ -24,21 +24,10 @@ namespace MoonbaseBeta
 
 			// For host
 			if ( IsServer )
-			{
 				cl.Camera = new MoonbaseBeta.MenuCamera();
 
-				//if ( isExplorationStarted == true )
-				//{
-				//	new MoonbaseBeta.PlayerExplorationHud();
-
-				//	var player = new MoonbaseBeta.ExplorationPlayer();
-				//	cl.Pawn = player;
-					
-				//	player.Respawn();
-				//}
-			}
-
 		}
+
 		public override void Shutdown()
 		{
 			ConsoleSystem.Run( "sv_gravity 600" );

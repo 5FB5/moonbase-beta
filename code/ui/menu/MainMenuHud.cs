@@ -3,6 +3,7 @@ using Sandbox.UI;
 
 namespace MoonbaseBeta
 {
+	[Library]
 	public class MainMenuHud : Sandbox.HudEntity<RootPanel>
 	{
 		public MainMenuHud()
@@ -10,13 +11,13 @@ namespace MoonbaseBeta
 			if ( !IsClient )
 				return;
 
-			RootPanel.SetTemplate( "ui/MainMenuHud.html" );
+			RootPanel.SetTemplate( "code/ui/MainMenuHud.html" );
+			RootPanel.StyleSheet.Load( "code/ui/styles/MainMenuHud.scss" );
 
-			Log.Warning( "[MoonbaseBeta -> MoonbaseBetaMainMenuHud.cs] 'MoonbaseBetaMainMenuHud.html' loaded!" );
+			RootPanel.AddChild<MenuButtons>();
+			RootPanel.AddChild<ChatBox>();
 		}
-		public void Test()
-		{
-			Log.Info( "Test" );
-		}
+
 	}
+
 }
